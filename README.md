@@ -126,6 +126,12 @@ bool result = "1000".CanParse<int>();
 bool result = "1.25".CanParse(typeof(double));
 ```
 
+#### Format
+```string.Format()``` の Wrapper
+```cs
+string formatted = "{0}-{1}".Formatx("abc", "def");		// formatted = "abc-def"
+```
+
 ## 注意事項
 * MSTest にて簡易な単体テストまでは確認していますが、全ての状況において正しい動作をすることを保証しません。
 
