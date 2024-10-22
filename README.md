@@ -129,7 +129,14 @@ bool result = "1.25".CanParse(typeof(double));
 #### Format
 ```string.Format()``` の Wrapper
 ```cs
-string formatted = "{0}-{1}".Formatx("abc", "def");		// formatted = "abc-def"
+string formatted = "{0}-{1}".Format("abc", "def");		// formatted = "abc-def"
+```
+
+#### Join
+```string.Join()``` の Wrapper
+```cs
+string[] src = { "1", "2", "3" };
+string joined = "-".Join(src);		// joined = "1-2-3"
 ```
 
 ## 注意事項
