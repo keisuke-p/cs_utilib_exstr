@@ -139,6 +139,20 @@ string[] src = { "1", "2", "3" };
 string joined = "-".Join(src);		// joined = "1-2-3"
 ```
 
+#### IsEmpty
+```string.IsNullOrEmpty()``` の Wrapper
+空文字列または半角空白のみであるかを判定する
+```cs
+// 空文字列
+bool isEmpty;
+isEmpty = "".IsEmpty();			// true
+isEmpty = "AAA".IsEmpty();		// false
+
+// 空白文字列
+isEmpty = " ".IsEmpty();				// false
+isEmpty = " ".IsEmptyOrWhiteSpace();	// true
+```
+
 ## 注意事項
 * MSTest にて簡易な単体テストまでは確認していますが、全ての状況において正しい動作をすることを保証しません。
 
