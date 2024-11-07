@@ -153,6 +153,27 @@ isEmpty = " ".IsEmpty();				// false
 isEmpty = " ".IsEmptyOrWhiteSpace();	// true
 ```
 
+#### Repeat
+同じ文字を繰り返し1つの文字列として形成する
+```cs
+// 文字列
+result = "ABC".Repeat(4);		// "ABCABCABCABC"
+// Unicode 文字
+result = 'A'.Repeat(3);			// "AAA"
+```
+
+#### Remove
+```string.Remove()``` の派生バージョン
+対象の文字列から指定の文字列を除去する
+```cs
+// すべて除去
+result = "123AAA456AAA789".Remove("AAA");		// "123456789"
+// 除去回数指定 (先頭から)
+result = "123AAA456AAA789".Remove("AAA", 1);	// "123456AAA789"
+// 除去回数指定 (末尾から)
+result = "123AAA456AAA789".Remove("AAA", -1);	// "123AAA456789"
+```
+
 ## 注意事項
 * MSTest にて簡易な単体テストまでは確認していますが、全ての状況において正しい動作をすることを保証しません。
 
