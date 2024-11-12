@@ -140,7 +140,7 @@ string joined = "-".Join(src);		// joined = "1-2-3"
 ```
 
 #### IsEmpty
-```string.IsNullOrEmpty()``` の Wrapper
+```string.IsNullOrEmpty()``` の Wrapper  
 空文字列または半角空白のみであるかを判定する
 ```cs
 // 空文字列
@@ -163,7 +163,7 @@ result = 'A'.Repeat(3);			// "AAA"
 ```
 
 #### Remove
-```string.Remove()``` の派生バージョン
+```string.Remove()``` の派生バージョン  
 対象の文字列から指定の文字列を除去する
 ```cs
 // すべて除去
@@ -172,6 +172,20 @@ result = "123AAA456AAA789".Remove("AAA");		// "123456789"
 result = "123AAA456AAA789".Remove("AAA", 1);	// "123456AAA789"
 // 除去回数指定 (末尾から)
 result = "123AAA456AAA789".Remove("AAA", -1);	// "123AAA456789"
+```
+
+#### PadCenter
+```string.PadLeft()``` と ```string.PadRight()``` の合わせ技
+指定文字数の中央に文字列を配置、先頭と末尾に指定文字で埋める
+```cs
+// 埋め込み文字を指定しないと半角空白(' ')で埋める
+result = "AA".PadCenter(6);						// "  AA  "
+// 埋め込み文字指定
+result = "AA".PadCenter(6, '-');				// "--AA--"
+// 配置文字列より指定文字数が少ない場合はそのまま
+result = "ABCDEFG".PadCenter(3, '*');			// "ABCDEFG"
+// 埋める文字部分が２で割れない場合は末尾側が１多くなる
+result = "AA".PadCenter(7, '_');				// "__AA___"
 ```
 
 ## 注意事項
